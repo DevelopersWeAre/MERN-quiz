@@ -1,0 +1,11 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "server": "npm run server --prefix server",
+    "ui": "npm run start --prefix ui"
+  },
+  "author": "",
+  "license": "ISC"
+}
