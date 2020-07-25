@@ -1,9 +1,9 @@
 const express = require('express');
 const { testController } = require('../controllers');
-const authorization = require('../util/authorization');
+const { auth } = require('../services');
 const app = express();
 
 app.get('/', testController);
-app.post('/', authorization(), testController);
+app.post('/', auth.authorize(), testController);
 
 module.exports = app;
