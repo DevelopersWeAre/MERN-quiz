@@ -1,5 +1,5 @@
 class ErrorHandler extends Error {
-  constructor(statusCode, message) {
+  constructor(statusCode = 500, message = 'Internal Server Error') {
     super();
     this.statusCode = statusCode;
     this.message = message;
@@ -8,7 +8,11 @@ class ErrorHandler extends Error {
 
 const handleError = (err, res) => {
   const { statusCode, message } = err;
-  console.log('\x1b[31m%s\x1b[0m', `[ERROR] ${message}`);
+
+  if (process.env.NODE_ENV !== 'production') {
+    console.log('\x1b[31m%s\x1b[0m', err.stack);
+  }
+
   res.status(statusCode).json({
     status: 'error',
     statusCode,
