@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+import "../../fonts/Montserrat-Regular.ttf";
+import "../../fonts/Montserrat-Bold.ttf";
 import "./App.css";
 
 import Header from "../Header/Header";

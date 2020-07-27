@@ -14,7 +14,7 @@
   color: var(--black);
 }
 
-.main-nav-link.active::after {
+.active::after {
   content: "";
   display: block;
   margin: 0 auto;
