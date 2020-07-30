@@ -1,0 +1,8 @@
+.UserLoggedIn-email {
+  font-family: Montserrat-Bold;
+  color: var(--primary);
+}
+
+.UserLoggedIn-icon {
+  vertical-align: middle;
+}
