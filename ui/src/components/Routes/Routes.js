@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 import Layout from "../Layout/Layout";
 // import Quizzes from "../Quizzes/Quizzes";
@@ -10,6 +10,7 @@ const Routes = () => (
     <Route exact path="/" component={Layout} />
     {/* <Route path="/quizzes" component={Quizzes} /> */}
     {/* <Route path="/ladder" component={Ladder} /> */}
+    <Route render={() => <Redirect to="/" />} />
   </Switch>
 );
 
