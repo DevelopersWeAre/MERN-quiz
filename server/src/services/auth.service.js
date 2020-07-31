@@ -1,16 +1,16 @@
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 const secret = process.env.JWT_KEY;
 
 module.exports = {
   authorize: () => {
     return (req, res, next) => {
-      const token = req.headers['authorization'];
+      const token = req.headers["authorization"];
       if (!token) {
         res.status(401).json({
-          status: 'no_access',
+          status: "no_access",
           statusCode: 401,
-          message: 'Access Denied',
+          message: "Access Denied",
         });
       } else {
         // Token comes in format 'Bearer token' so we slice it to get tokenBody
@@ -18,9 +18,9 @@ module.exports = {
         jwt.verify(tokenBody, secret, (err, decoded) => {
           if (err) {
             res.status(401).json({
-              status: 'no_access',
+              status: "no_access",
               statusCode: 401,
-              message: 'Access Denied',
+              message: "Access Denied",
             });
           } else {
             // Assign q_auth variable to the req to be used in other middleware-s / controllers
@@ -37,13 +37,4 @@ module.exports = {
     const token = jwt.sign(payload, secret);
     return token;
   },
-  getHashedPassword(password) {
-    const salt = bcrypt.genSaltSync(10);
-    const hash = bcrypt.hashSync(password, salt);
-    return hash;
-  },
-  async verifyPassword(password, hash) {
-    const match = await bcrypt.compare(password, hash);
-    return match;
-  }
 };
