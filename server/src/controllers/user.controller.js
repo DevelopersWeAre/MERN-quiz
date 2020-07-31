@@ -1,4 +1,3 @@
-const { ErrorHandler, handleError } = require("../util/ErrorHandler");
 const User = require("../models/user.model");
 const _ = require("lodash");
 
