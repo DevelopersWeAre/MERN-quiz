@@ -15,3 +15,6 @@
 **/*.log
 .idea
 .vscode
+
+# docker for dev env/i dont want to install db locally
+docker-compose.dev.yml
