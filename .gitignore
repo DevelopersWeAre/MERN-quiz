@@ -14,3 +14,7 @@
 **/.env
 **/*.log
 .idea
+
+# docker for dev env/i dont want to install db locally
+docker-compose.dev.yml
+server/scripts

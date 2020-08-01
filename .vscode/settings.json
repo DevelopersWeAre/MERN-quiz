@@ -1,3 +1,5 @@
 {
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "deno.enable": false,
+  "typescript.validate.enable": false
 }
