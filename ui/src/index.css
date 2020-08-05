@@ -1,0 +1,45 @@
+/* === RESETS & GLOBAL STYLES === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #8e6cfe;
+  --primary_light: #f3f1fa;
+  --black: #000000;
+  --white: #ffffff;
+  --success: #00670b;
+  --gray: #626262;
+  --gray_light: #e5e5e5;
+  --gold: #fcf206;
+  --gold_dark: #c8c000;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(./fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"),
+    url(./fonts/Montserrat-Bold.ttf) format("truetype");
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  line-height: 1.5;
+  background-color: var(--white);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
