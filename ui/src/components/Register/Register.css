@@ -1,4 +1,5 @@
 .Register__container {
+  max-width: 320px;
   font-size: 14px;
   display: flex;
   justify-content: center;
