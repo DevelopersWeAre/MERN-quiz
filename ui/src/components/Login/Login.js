@@ -1,12 +1,19 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
+// Services
+import { USER_SERVICE } from "../../services";
+
 // Stylesheet
 import "./Login.css";
 
 const Login = () => {
   const { handleSubmit, register, errors } = useForm();
-  const onSubmit = values => console.log(values);
+
+  const onSubmit = values =>
+    USER_SERVICE.POST_LOGIN(values)
+      .then(res => res)
+      .catch(e => e);
 
   return (
     <div className="style__Paper Login__container">
