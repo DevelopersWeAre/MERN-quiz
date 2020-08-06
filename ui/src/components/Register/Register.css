@@ -10,6 +10,7 @@
 .Register__container > form {
   padding: 20px 10px;
   width: 100%;
+  min-height: 350px;
 }
 
 .Register__input-container {

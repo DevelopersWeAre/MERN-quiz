@@ -10,6 +10,7 @@
 .Login__container > form {
   padding: 20px 10px;
   width: 100%;
+  min-height: 350px;
 }
 
 .Login__input-container {
