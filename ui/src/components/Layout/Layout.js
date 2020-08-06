@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <main style={{ flex: 1 }}>{children}</main>
+      <main style={{ display: "flex", flex: 1 }}>{children}</main>
       <Footer />
     </>
   );

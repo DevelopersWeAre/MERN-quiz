@@ -30,6 +30,13 @@
     url(./fonts/Montserrat-Bold.ttf) format("truetype");
 }
 
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
 body {
   font-family: Montserrat, sans-serif;
   line-height: 1.5;
@@ -50,4 +57,28 @@ li {
 
 a {
   text-decoration: none;
+}
+
+input {
+  border: unset;
+  padding: 10px 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+button {
+  border: unset;
+  cursor: pointer;
+  border-radius: 20px;
+}
+/* Common global styles, used in multiple components */
+.style__Paper {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.style__Error-text {
+  color: red;
+  font-size: 13px;
+  opacity: 0.7;
 }
