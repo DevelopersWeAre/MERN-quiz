@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 // Services
@@ -51,8 +52,11 @@ const Login = () => {
             </span>
           )}
         </label>
-        <div className="Login__button">
+        <div className="Login__button-container">
           <button type="submit">Login</button>
+          <span>
+            Don't have an account? <Link to="register">Register</Link>
+          </span>
         </div>
       </form>
     </div>

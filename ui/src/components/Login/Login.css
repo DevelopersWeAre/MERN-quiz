@@ -26,15 +26,25 @@
   bottom: 2px;
 }
 
-.Login__button {
+.Login__button-container {
   padding: 25px;
+  text-align: center;
 }
 
-.Login__button > button {
+.Login__button-container > button {
   padding: 10px 0;
+  margin-bottom: 5px;
   width: 100%;
   background-color: var(--primary);
   color: var(--white);
   text-transform: uppercase;
+  font-weight: 600;
+}
+
+.Login__button-container > span {
+  font-style: italic;
+}
+
+.Login__button-container > span > a {
   font-weight: 600;
 }
