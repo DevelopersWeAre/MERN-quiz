@@ -1,0 +1,51 @@
+.Login__container {
+  max-width: 320px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.Login__container > form {
+  padding: 20px 10px;
+  width: 100%;
+  min-height: 350px;
+}
+
+.Login__input-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  padding: 0 25px 25px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.Login__error-position {
+  position: absolute;
+  bottom: 2px;
+}
+
+.Login__button-container {
+  padding: 25px;
+  text-align: center;
+}
+
+.Login__button-container > button {
+  padding: 10px 0;
+  margin-bottom: 5px;
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.Login__button-container > span {
+  font-style: italic;
+}
+
+.Login__button-container > span > a {
+  font-weight: 600;
+}

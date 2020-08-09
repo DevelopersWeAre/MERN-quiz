@@ -1,0 +1,84 @@
+/* === RESETS & GLOBAL STYLES === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #8e6cfe;
+  --primary_light: #f3f1fa;
+  --black: #000000;
+  --white: #ffffff;
+  --success: #00670b;
+  --gray: #626262;
+  --gray_light: #e5e5e5;
+  --gold: #fcf206;
+  --gold_dark: #c8c000;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(./fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"),
+    url(./fonts/Montserrat-Bold.ttf) format("truetype");
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  line-height: 1.5;
+  background-color: var(--white);
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: unset;
+  padding: 10px 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+button {
+  border: unset;
+  cursor: pointer;
+  border-radius: 20px;
+}
+/* Common global styles, used in multiple components */
+.style__Paper {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.style__Error-text {
+  color: red;
+  font-size: 13px;
+  opacity: 0.7;
+}
